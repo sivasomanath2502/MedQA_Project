@@ -1,0 +1,21 @@
+{
+  "base_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "reference_acc": 40.009560229445505,
+  "attempt1": {
+    "strategy": "random_negatives",
+    "accuracy": 37.523900573613766,
+    "delta": -2.49,
+    "failed": true,
+    "reasons": [
+      "Easy negatives: randomly sampled wrong-topic passages are trivially distinguishable \u2014 no fine-grained medical learning occurs",
+      "Catastrophic forgetting: training on narrow medical distribution overwrites general relevance scoring capability"
+    ]
+  },
+  "attempt2": {
+    "strategy": "hard_negatives_mixed_data",
+    "lr": 5e-06,
+    "accuracy": 33.269598470363285,
+    "delta": -6.74,
+    "improved": false
+  }
+}

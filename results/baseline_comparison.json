@@ -1,0 +1,27 @@
+{
+  "random_chance": {
+    "accuracy": 25.0,
+    "description": "4-option random selection"
+  },
+  "no_rag": {
+    "accuracy": 28.967495219885276,
+    "description": "Cross-encoder, no retrieval",
+    "model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "ece": 0.0755411565955002,
+    "faithfulness": 0.0
+  },
+  "rag_baseline": {
+    "accuracy": 35.4206500956023,
+    "description": "FAISS retrieval + CE scoring",
+    "model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "rag_gain": 6.45,
+    "ece": 0.13141610058077893,
+    "faithfulness": 0.1367112810707457,
+    "failure_types": {
+      "type1_pct": 48.3,
+      "type2_pct": 51.7,
+      "type3_pct": 0.0,
+      "type4_pct": 0.0
+    }
+  }
+}

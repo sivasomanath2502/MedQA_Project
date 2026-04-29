@@ -1,0 +1,30 @@
+{
+  "ms_marco_l6": {
+    "label": "ms-marco-MiniLM-L6 (22M)",
+    "params": "22M",
+    "task": "Relevance scoring",
+    "accuracy": 40.009560229445505,
+    "description": "Base cross-encoder"
+  },
+  "medical_ce_l12": {
+    "label": "Medical CE L-12 (22M)",
+    "params": "22M",
+    "task": "Relevance scoring",
+    "accuracy": 39.67495219885277,
+    "description": "Final encoder system"
+  },
+  "biobert_base": {
+    "label": "BioBERT-base (110M)",
+    "params": "110M",
+    "task": "Span extraction (SQuAD)",
+    "accuracy": 22.036328871892927,
+    "description": "Task mismatch"
+  },
+  "biobert_large_squad": {
+    "label": "BioBERT-large-SQuAD (340M)",
+    "params": "340M",
+    "task": "Span extraction (SQuAD)",
+    "accuracy": 22.753346080305928,
+    "description": "Task mismatch"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "systems": {
+    "Random chance": {
+      "accuracy": 25.0
+    },
+    "No-RAG (CE only)": {
+      "accuracy": 28.967495219885276
+    },
+    "RAG baseline": {
+      "accuracy": 35.4206500956023
+    },
+    "CRAG v1 (gate)": {
+      "accuracy": 35.038240917782026
+    },
+    "CRAG v2 (+ BM25 fallback)": {
+      "accuracy": 39.29254302103251
+    },
+    "CRAG v3 (+ reranking)": {
+      "accuracy": 40.009560229445505
+    },
+    "FT Attempt 1 (random neg)": {
+      "accuracy": 37.523900573613766
+    },
+    "FT Attempt 2 (hard neg)": {
+      "accuracy": 33.269598470363285
+    },
+    "Medical CE (final encoder)": {
+      "accuracy": 39.67495219885277
+    },
+    "Flan-T5 (comparison)": {
+      "accuracy": 48.75717017208413
+    }
+  },
+  "rows": [
+    {
+      "system": "Random chance",
+      "accuracy": 25.0,
+      "delta": null
+    },
+    {
+      "system": "No-RAG (CE only)",
+      "accuracy": 28.967495219885276,
+      "delta": 3.9674952198852758
+    },
+    {
+      "system": "RAG baseline",
+      "accuracy": 35.4206500956023,
+      "delta": 6.453154875717022
+    },
+    {
+      "system": "CRAG v1 (gate)",
+      "accuracy": 35.038240917782026,
+      "delta": -0.3824091778202714
+    },
+    {
+      "system": "CRAG v2 (+ BM25 fallback)",
+      "accuracy": 39.29254302103251,
+      "delta": 4.254302103250481
+    },
+    {
+      "system": "CRAG v3 (+ reranking)",
+      "accuracy": 40.009560229445505,
+      "delta": 0.7170172084129973
+    },
+    {
+      "system": "FT Attempt 1 (random neg)",
+      "accuracy": 37.523900573613766,
+      "delta": -2.485659655831739
+    },
+    {
+      "system": "FT Attempt 2 (hard neg)",
+      "accuracy": 33.269598470363285,
+      "delta": -4.254302103250481
+    },
+    {
+      "system": "Medical CE (final encoder)",
+      "accuracy": 39.67495219885277,
+      "delta": 6.405353728489487
+    },
+    {
+      "system": "Flan-T5 (comparison)",
+      "accuracy": 48.75717017208413,
+      "delta": 9.082217973231359
+    }
+  ],
+  "contributions": {
+    "Model prior": 3.97,
+    "Dense retrieval": 6.45,
+    "CRAG gate": -0.38,
+    "BM25 fallback": 4.25,
+    "Reranking": 0.72,
+    "Medical CE domain": -0.33
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "random_chance": 25.0,
+  "base_ce_crag_v3": {
+    "accuracy": 40.009560229445505,
+    "model": "ms-marco-MiniLM-L6",
+    "description": "Base cross-encoder"
+  },
+  "medical_ce_crag_v3": {
+    "accuracy": 39.67495219885277,
+    "model": "cross-encoder/ms-marco-MiniLM-L-12-v2",
+    "description": "Final encoder-only system"
+  },
+  "flan_t5_crag": {
+    "accuracy": 48.75717017208413,
+    "model": "google/flan-t5-large",
+    "description": "Encoder-decoder comparison",
+    "t5_fixed": 478,
+    "t5_broke": 288,
+    "net_fixed": 190,
+    "elim_fixed": 97,
+    "factual_fixed": 381
+  },
+  "encoder_ceiling": 39.67495219885277,
+  "t5_gain_over_enc": 9.08
+}

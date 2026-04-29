@@ -1,0 +1,13 @@
+{
+  "n_evaluated": 1104,
+  "n_total": 2092,
+  "coverage_pct": 52.8,
+  "precision_at_k": {
+    "1": 0.1513,
+    "3": 0.0809,
+    "5": 0.0612
+  },
+  "mrr": 0.214,
+  "nprobe": 10,
+  "recall_at_3": 0.973
+}

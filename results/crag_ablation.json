@@ -1,0 +1,61 @@
+{
+  "systems": {
+    "Random chance": {
+      "accuracy": 25.0
+    },
+    "No-RAG (CE only)": {
+      "accuracy": 28.967495219885276
+    },
+    "RAG baseline": {
+      "accuracy": 35.4206500956023
+    },
+    "CRAG v1 (gate)": {
+      "accuracy": 35.038240917782026
+    },
+    "CRAG v2 (+ BM25)": {
+      "accuracy": 39.29254302103251
+    },
+    "CRAG v3 (+ reranking)": {
+      "accuracy": 40.009560229445505
+    }
+  },
+  "rows": [
+    {
+      "system": "Random chance",
+      "accuracy": 25.0,
+      "delta": null
+    },
+    {
+      "system": "No-RAG (CE only)",
+      "accuracy": 28.967495219885276,
+      "delta": 3.9674952198852758
+    },
+    {
+      "system": "RAG baseline",
+      "accuracy": 35.4206500956023,
+      "delta": 6.453154875717022
+    },
+    {
+      "system": "CRAG v1 (gate)",
+      "accuracy": 35.038240917782026,
+      "delta": -0.3824091778202714
+    },
+    {
+      "system": "CRAG v2 (+ BM25)",
+      "accuracy": 39.29254302103251,
+      "delta": 4.254302103250481
+    },
+    {
+      "system": "CRAG v3 (+ reranking)",
+      "accuracy": 40.009560229445505,
+      "delta": 0.7170172084129973
+    }
+  ],
+  "contributions": {
+    "Model prior (CE)": 3.97,
+    "Dense retrieval": 6.45,
+    "CRAG gate": -0.38,
+    "BM25 fallback": 4.25,
+    "Reranking": 0.72
+  }
+}

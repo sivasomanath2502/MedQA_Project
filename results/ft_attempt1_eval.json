@@ -1,0 +1,13 @@
+{
+  "attempt": 1,
+  "strategy": "random_negatives",
+  "lr": "2e-5 (default)",
+  "n_pairs": 60000,
+  "accuracy": 37.523900573613766,
+  "reference": 40.009560229445505,
+  "drop": -2.49,
+  "failure_reasons": [
+    "Easy negatives: randomly sampled wrong-topic passages are trivially distinguishable \u2014 no fine-grained medical learning occurs",
+    "Catastrophic forgetting: training on narrow medical distribution overwrites general relevance scoring capability"
+  ]
+}

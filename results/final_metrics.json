@@ -1,0 +1,162 @@
+{
+  "dataset": {
+    "name": "MedMCQA",
+    "kb_size": 156555,
+    "eval_size": 2092,
+    "subjects": 21
+  },
+  "accuracy": {
+    "random_chance": 25.0,
+    "no_rag": 28.97,
+    "rag_baseline": 35.42,
+    "crag_v1": 35.04,
+    "crag_v2": 39.29,
+    "crag_v3": 40.01,
+    "ft_attempt1": 37.52,
+    "ft_attempt2": 33.27,
+    "medical_ce_final": 39.67,
+    "flan_t5_comparison": 48.76
+  },
+  "component_contributions": {
+    "model_prior": 3.97,
+    "dense_retrieval": 6.45,
+    "crag_gate": -0.38,
+    "bm25_fallback": 4.25,
+    "reranking": 0.72,
+    "medical_ce": -0.33,
+    "total_crag_gain": 4.25
+  },
+  "retrieval_metrics": {
+    "recall_at_3": 0.973,
+    "precision_at_1": null,
+    "precision_at_3": null,
+    "precision_at_5": null,
+    "mrr": 0.214,
+    "nprobe": 50,
+    "latency_ms": 4.34
+  },
+  "faithfulness": {
+    "rag_baseline": 0.1367,
+    "medical_ce": 0.2165,
+    "flan_t5": 0.1764
+  },
+  "ece": {
+    "rag_baseline": 0.1314,
+    "crag_v3": 0.1308,
+    "medical_ce": 0.1355
+  },
+  "failure_types": {
+    "rag_baseline": {
+      "type1": 48.3,
+      "type2": 51.7,
+      "type3": 0.0,
+      "type4": 0.0
+    },
+    "medical_ce": {
+      "type1": 38.3,
+      "type2": 28.2,
+      "type3": 33.5,
+      "type4": 0.0
+    }
+  },
+  "per_subject_accuracy": {
+    "rag_baseline": {
+      "Anatomy": 39.285714285714285,
+      "Dental": 31.804281345565748,
+      "Physiology": 42.68292682926829,
+      "Microbiology": 31.746031746031743,
+      "Biochemistry": 39.361702127659576,
+      "Pediatrics": 37.704918032786885,
+      "Pathology": 35.67251461988304,
+      "Anaesthesia": 13.333333333333334,
+      "Medicine": 33.54037267080746,
+      "Gynaecology & Obstetrics": 38.53211009174312,
+      "Pharmacology": 39.83739837398374,
+      "Surgery": 34.031413612565444,
+      "Forensic Medicine": 48.148148148148145,
+      "Skin": 33.33333333333333,
+      "ENT": 37.5,
+      "Radiology": 37.93103448275862,
+      "Social & Preventive Medicine": 29.508196721311474,
+      "Psychiatry": 57.14285714285714,
+      "Ophthalmology": 57.692307692307686,
+      "Orthopaedics": 45.45454545454545,
+      "Unknown": 0.0
+    },
+    "medical_ce": {
+      "Anatomy": 42.857142857142854,
+      "Dental": 38.07339449541284,
+      "Physiology": 42.68292682926829,
+      "Microbiology": 46.03174603174603,
+      "Biochemistry": 44.680851063829785,
+      "Pediatrics": 37.704918032786885,
+      "Pathology": 33.91812865497076,
+      "Anaesthesia": 40.0,
+      "Medicine": 37.88819875776397,
+      "Gynaecology & Obstetrics": 46.788990825688074,
+      "Pharmacology": 45.52845528455284,
+      "Surgery": 31.93717277486911,
+      "Forensic Medicine": 48.148148148148145,
+      "Skin": 33.33333333333333,
+      "ENT": 29.166666666666668,
+      "Radiology": 44.827586206896555,
+      "Social & Preventive Medicine": 42.62295081967213,
+      "Psychiatry": 57.14285714285714,
+      "Ophthalmology": 73.07692307692307,
+      "Orthopaedics": 27.27272727272727,
+      "Unknown": 0.0
+    },
+    "flan_t5": {
+      "Anatomy": 60.71428571428571,
+      "Dental": 42.04892966360856,
+      "Physiology": 53.65853658536586,
+      "Microbiology": 50.79365079365079,
+      "Biochemistry": 62.76595744680851,
+      "Pediatrics": 49.18032786885246,
+      "Pathology": 47.953216374269005,
+      "Anaesthesia": 46.666666666666664,
+      "Medicine": 49.06832298136646,
+      "Gynaecology & Obstetrics": 55.96330275229357,
+      "Pharmacology": 54.47154471544715,
+      "Surgery": 41.8848167539267,
+      "Forensic Medicine": 48.148148148148145,
+      "Skin": 77.77777777777779,
+      "ENT": 58.333333333333336,
+      "Radiology": 48.275862068965516,
+      "Social & Preventive Medicine": 52.459016393442624,
+      "Psychiatry": 57.14285714285714,
+      "Ophthalmology": 65.38461538461539,
+      "Orthopaedics": 45.45454545454545,
+      "Unknown": 0.0
+    }
+  },
+  "finetuning": {
+    "attempt1": {
+      "strategy": "random_negatives",
+      "accuracy": 37.52,
+      "delta": -2.49,
+      "outcome": "failed"
+    },
+    "attempt2": {
+      "strategy": "hard_negatives_mixed_data",
+      "accuracy": 33.27,
+      "delta": -6.74,
+      "outcome": "did_not_improve"
+    }
+  },
+  "encoder_vs_decoder": {
+    "encoder_ceiling": 39.67,
+    "flan_t5_accuracy": 48.76,
+    "t5_gain": 9.08,
+    "questions_t5_fixed": 478,
+    "questions_t5_broke": 288,
+    "net_fixed": 190
+  },
+  "sota_comparison": {
+    "this_work": 39.67,
+    "clinical_camel": 54.2,
+    "med_palm_2": 72.3,
+    "random": 25.0,
+    "gap_to_camel": 14.53
+  }
+}
